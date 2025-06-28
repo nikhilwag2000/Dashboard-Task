@@ -1,0 +1,97 @@
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 16px 0; // gives vertical space between upper and lower nav
+  }
+  
+.sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60vh;
+    width: 72px;
+    background-color: #fdfafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+  
+  .upper-nav,
+  .lower-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-top: 0;
+
+  }
+  
+  .upper-nav {
+    .frosted-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .circle {
+        width: 20px;
+        height: 20px;
+        background-color: #a78bfa;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(167, 139, 250, 0.4);
+      }
+    }
+  
+    div,
+    svg {
+      cursor: pointer;
+  
+      svg {
+        width: 24px;
+        height: 24px;
+        stroke: #000;
+      }
+  
+      path {
+        stroke: #000;
+      }
+    }
+  
+    .profile svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  .lower-nav {
+    .profile-image {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ccc;
+    }
+  
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: #000;
+  
+      path {
+        stroke: #000;
+      }
+    }
+  }
+  

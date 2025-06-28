@@ -1,0 +1,73 @@
+<div class="user-name">
+    <h1>Welcome back, Olivia</h1>
+</div>
+
+<div class="dashboard">
+    <!-- Left Card -->
+    <div class="card-one">
+        <div class="vendor-card">
+            <div class="info">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.4Zu8X_3loiPDZnxTZFrexAHaHa&pid=Api&P=0&h=180" alt="" />
+                <div class="text-block">
+                    <h2>Vendor breakdown</h2>
+                    <p>Keep track of vendors and their security ratings.</p>
+                </div>
+            </div>
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="bi bi-three-dots-vertical">
+                <path
+                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+            </svg>
+        </div>
+
+        <div class="security_month_chart" [chart]="chart"></div>
+
+        <div class="button-container">
+            <button class="view-report">View full report</button>
+        </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="card-two">
+        <div class="vendor-card-two">
+            <div class="info-two">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.4Zu8X_3loiPDZnxTZFrexAHaHa&pid=Api&P=0&h=180" alt="" />
+                <div class="text-block-two">
+                    <h2>Vendors monitored</h2>
+                    <p>You’re using 80% of available spots.</p>
+                </div>
+            </div>
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="bi bi-three-dots-vertical">
+                <path
+                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+            </svg>
+        </div>
+
+        <div class="gauge-wrapper">
+            <ngx-gauge class="custom-gauge" [type]="'semi'" [value]="240" [min]="0" [max]="300" [cap]="'round'"
+                [thick]="15" [label]="''" [append]="''" [foregroundColor]="'#A78BFA'" [backgroundColor]="'#EFEFEF'"
+                [size]="200">
+            </ngx-gauge>
+
+            <div class="top-right-indicator">
+                <svg width="30" height="15" viewBox="0 0 30 15">
+                    <defs>
+                        <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                            <path d="M0,0 L6,3 L0,6 Z" fill="#28C76F" />
+                        </marker>
+                    </defs>
+                    <polyline points="0,12 6,4 12,10 18,2 24,8 30,2" fill="none" stroke="#28C76F" stroke-width="2"
+                        marker-end="url(#arrow)" />
+                </svg>
+                <span>10%</span>
+            </div>
+        </div>
+
+        <p class="limit-msg">You’ve almost reached your limit</p>
+        <p class="sub-msg">You have used 80% of your available spots.<br>Upgrade plan to monitor more vendors.</p>
+
+        <div class="button-container">
+            <button class="view-report">Upgrade plan</button>
+        </div>
+    </div>
+</div>
+  
